@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0F172A">
 <title>Monthly Challenge</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
 <style>
 :root{
   box-sizing:border-box;
@@ -41,7 +43,7 @@ body{margin:0;min-height:100%;background:var(--bg);color:var(--text);
   font-size:15px;line-height:1.35;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
 button,input,select,textarea{font:inherit;color:inherit}
 header.app{background:var(--primary);color:#fff;display:flex;align-items:center;gap:12px;padding:10px 14px}
-header.app .logo{font-size:26px;line-height:1}
+header.app .logo{width:32px;height:32px;object-fit:contain;border-radius:8px;display:block}
 header.app .ttl{flex:1;min-width:0}
 header.app .ttl b{display:block;font-size:16px}
 header.app .ttl small{color:var(--subtle);font-size:11px}
@@ -121,7 +123,7 @@ textarea.note{width:100%;min-height:76px;background:var(--surface-alt);border:1p
 #toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--primary-deep);color:#fff;border-radius:10px;padding:10px 14px;font-size:13px;z-index:120;max-width:90%;opacity:0;pointer-events:none;transition:opacity .2s}
 #toast.on{opacity:1}
 #splash{position:fixed;inset:0;background:var(--primary);color:#fff;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;animation:splash .9s ease .5s forwards}
-#splash .z{font-size:44px}#splash b{font-size:24px}#splash span{color:var(--subtle);font-size:13px}
+#splash .z{width:72px;height:72px;object-fit:contain;border-radius:16px;display:block}#splash b{font-size:24px}#splash span{color:var(--subtle);font-size:13px}
 @keyframes splash{to{opacity:0;visibility:hidden}}
 @media (prefers-reduced-motion:reduce){#splash{display:none}}
 #printArea{display:none}
@@ -143,11 +145,11 @@ textarea.note{width:100%;min-height:76px;background:var(--surface-alt);border:1p
 </style>
 </head>
 <body>
-<div id="splash"><div class="z">ⵣ</div><b>Monthly Challenge</b><span>Build the month, one day at a time</span></div>
+<div id="splash"><img class="z" src="icon.png" alt="App Icon"><b>Monthly Challenge</b><span>Build the month, one day at a time</span></div>
 
 <header class="app">
-  <div class="logo">ⵣ</div>
-  <div class="ttl"><b>Monthly Challenge</b><small>Discipline tracker · made by ACHI ⵣ and SKY</small></div>
+  <img class="logo" src="icon.png" alt="App Icon">
+  <div class="ttl"><b>Monthly Challenge</b><small>Discipline tracker · made by ACHI ⵣ, zino and SKY</small></div>
   <div class="seg"><button id="th-light">☀ Light</button><button id="th-dark">🌙 Dark</button></div>
 </header>
 <nav class="tabs">
@@ -179,7 +181,7 @@ textarea.note{width:100%;min-height:76px;background:var(--surface-alt);border:1p
   <div class="card pet" id="pet"></div>
 
   <div id="board"><div id="boardInner"></div></div>
-  <div class="foot">made by ACHI ⵣ and SKY</div>
+  <div class="foot">made by ACHI ⵣ, zino and SKY</div>
 </section>
 
 <section class="page" id="p-info">
@@ -199,7 +201,7 @@ textarea.note{width:100%;min-height:76px;background:var(--surface-alt);border:1p
     <div class="lbl">STUDYING / READING:</div><textarea class="note" data-note="STUDYING / READING" placeholder="Study / reading observations"></textarea>
     <div class="lbl">MOOD:</div><textarea class="note" data-note="MOOD" placeholder="Mood observations"></textarea>
   </div>
-  <div class="foot">made by ACHI ⵣ and SKY</div>
+  <div class="foot">made by ACHI ⵣ, zino and SKY</div>
 </section>
 
 <section class="page" id="p-tasks">
@@ -217,7 +219,7 @@ textarea.note{width:100%;min-height:76px;background:var(--surface-alt);border:1p
       <div class="hint">Tip: select a task to edit it. Changes are saved automatically.</div>
     </div>
   </div>
-  <div class="foot">made by ACHI ⵣ and SKY</div>
+  <div class="foot">made by ACHI ⵣ, zino and SKY</div>
 </section>
 </main>
 
